@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions</title>
+</head>
+<body>
+    <label for="weather">Select the weather today: </label>
+    <select id="weather">
+        <option value="">Choose weather</option>
+        <option value="sunny">Sunny</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowing">Snowing</option>
+        <option value="overcast">Overcast</option>
+    </select>
+    <p></p>
+    <script>
+        const select = document.querySelector('select');
+        const para = document.querySelector('p');
+        let temperature = 85;
+        select.addEventListener('change', setWeather);
+        function setWeather() {
+            /*
+            const choice = select.value;
+            if (choice === 'sunny' && temperature < 86) {
+                para.textContent = `It is ${temperature} degrees outside. It is nice and sunny today. Wear shorts! Go to the beach or park and get a ice-cream.`;  
+            }
+            else if (choice === 'sunny' && temperature >= 86) {
+                para.textContent = `It is ${temperature} degrees outside, really hot, make sure to put sunscreen when going outside. It is nice and sunny today. Wear shorts! Go to the beach or park and get a ice-cream.`;
+            }
+            else if (choice === 'rainy') {
+                para.textContent = 'Rain is falling outside, Don\'t stay outside for too long';
+            }
+            else if (choice === 'snowing') {
+                para.textContent = 'The snow is coming down! Stay at home with a coffee';
+            }
+            else if (choice === 'overcast') {
+                para.textContent = 'It is not raining, but the sky is dark, so take rain coat with you';
+            }
+            else {
+                para.textContent = '';
+            }
+            */ 
+           // Below is a same thing done by switch statement
+           const choice = select.value;
+           switch(choice) {
+            case 'sunny':
+                para.textContent = "The weather is sunny";
+                break;
+            case 'rainy':
+                para.textContent = "The weather is rainy";
+                break;
+            case 'snowing':
+                para.textContent = "The weather is snowing";
+                break;
+            default:
+                para.textContent = "";
+           }
+           
+        }
+        // Ternary operator
+        // (condition) ? run this code : run this code instead
+    </script>
+</body>
+</html>
