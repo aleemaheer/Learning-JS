@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<label>Enter text: </label><input type="text"></input>
+		<script>
+			const input = document.querySelector('input');
+            /* Regular function 
+			input.addEventListener('keydown', function(event) // this is a anonymous function which have no function name {
+			    console.log(event.key);
+			});
+            */
+            /* Arrow funtion
+            input.addEventListener('keyup', (event) => {
+                console.log(`You pressed ${event.key}`);
+                console.log(event);
+            }) 
+            */
+            // Refactored form of above funtion
+            input.addEventListener('keyup', event => console.log(`You pressed ${event.key}`));       
+		</script>
+	</body>
+</html>
