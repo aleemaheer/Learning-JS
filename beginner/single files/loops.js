@@ -29,11 +29,20 @@ const contacts = [
     "Mary:9998769",
     "Dianne:9384975",
 ];
-let newArray;
+let newArray = [];
 for (contact of contacts) {
-    newArray = contact.split(':');
+    newArray = contact.split(':'); // this will only returns the last contact
 }
-console.log(newArray[3]);
+console.log("this is here", newArray);
+
+// Just playing
+let testArray = [];
+console.log(typeof testArray);
+for (let i = 0; i < contacts.length - 1; i++) {
+    for (let contact of contacts) {
+        console.log(contact.split(':'));
+    }
+}
 
 // While loop
 
