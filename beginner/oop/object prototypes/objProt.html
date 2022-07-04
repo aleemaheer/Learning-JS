@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myDate = new Date();
+        let myObject = myDate;
+        do {
+            myObject = Object.getPrototypeOf(myObject);
+            console.log(myObject);
+        }
+        while (myObject)
+        // Setting something else to object prototype
+        console.log(myDate.getYear()); 
+        myDate.getYear = function () {
+            console.log('Object Prototype changed');
+        }
+        console.log(myDate.getYear); // This is called shadowing, we overwrite the object prototype
+
+        const personPrototype =  {
+            greet() {
+                console.log('Hello!');
+            }
+        }
+        const carl = Object.create(personPrototype);
+        console.log(carl.greet);
+    </script>
+</body>
+</html>
