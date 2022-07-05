@@ -4,3 +4,6 @@
 * Abstraction : Reduce complexity + isolate impact of changes
 * Inheritence : Eliminate reduntant code
 * Polymorphism : Refactor ugly switch/case statements
+###### Some Concepts
+* Primitives are copied by their values.
+* Objects are copied by their reference.
